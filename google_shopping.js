@@ -36,30 +36,28 @@ console.log("Answer to #1: ")
 console.log(count); // There are 25 items of kind shopping#product
 console.log(data['currentItemCount']); // Shows there are 25 of these
 
-
 // 2.) Find all items with a backorder availability in inventories.
-console.log("Answer to #2: ")
+console.log("\nAnswer to #2: ")
 for (var i = 0; i < backorders.length; i++) {
     console.log(backorders[i]);
 }
 
 // 3.) Find all items with more than one image link.
-console.log("Answer to #3: ")
+console.log("\nAnswer to #3: ")
 for (var i = 0; i < multi_images.length; i++) {
     console.log(multi_images[i]);
 }
 
 // 4.) Find all canon products in the items (careful with case 
 // sensitivity).
-console.log("Answer to #4: ")
+console.log("\nAnswer to #4: ")
 for (var i = 0; i < canons.length; i++) {
     console.log(canons[i]);
 }
 
 // 5.) Find all items that have product author name of "eBay" and are 
 // brand "Canon".
-console.log("Answer to #5: ")
+console.log("\nAnswer to #5: ")
 for (var i = 0; i < ebay_canons.length; i++) {
     console.log(ebay_canons[i]);
 }
-
