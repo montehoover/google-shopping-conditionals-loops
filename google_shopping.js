@@ -61,3 +61,13 @@ console.log("\nAnswer to #5: ")
 for (var i = 0; i < ebay_canons.length; i++) {
     console.log(ebay_canons[i]);
 }
+
+// 6.)
+for (var i = 0; i < data['items'].length; i++) {
+    currentItem = data['items'][i];
+    console.log("\n" + currentItem.product.brand);
+    console.log(currentItem.product.images);
+    console.log(currentItem.product.inventories[0].price)
+
+}
+
