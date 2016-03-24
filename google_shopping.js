@@ -4,6 +4,7 @@ var count = 0;
 var backorders = []
 var multi_images = []
 var canons = []
+var ebay_canons = []
 for (var i = 0; i < data['items'].length; i++) {
     currentItem = data['items'][i];
     // 1.)
@@ -18,10 +19,14 @@ for (var i = 0; i < data['items'].length; i++) {
     if (currentItem.product.images.length > 1) {
         multi_images.push(currentItem.product.title);
     }
-        if (currentItem.product.brand === "Canon") {
+    // 4.)
+    if (currentItem.product.brand === "Canon") {
         canons.push(currentItem.product.title);
+        // 5.)
+        if (currentItem.product.author.name.match(/ebay/gi)) {
+            ebay_canons.push(currentItem.product.title)
+        }
     }
-
 }
 // 1.) The kind of results you're are dealing are shopping#products. 
 // Go through the items and find all results that have kind of 
@@ -53,5 +58,8 @@ for (var i = 0; i < canons.length; i++) {
 
 // 5.) Find all items that have product author name of "eBay" and are 
 // brand "Canon".
+console.log("Answer to #5: ")
+for (var i = 0; i < ebay_canons.length; i++) {
+    console.log(ebay_canons[i]);
+}
 
-//console.log(data["items"]);
